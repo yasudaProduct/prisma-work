@@ -9,6 +9,7 @@ generator client {
 
 model User {
   id    Int    @id @default(autoincrement())
+  email String @unique
   name  String
   posts Post[]
 }
@@ -16,7 +17,8 @@ model User {
 model Post {
   id        Int     @id @default(autoincrement())
   title     String
+  content   String
   published Boolean @default(true)
-  authorId  Int
-  author    User    @relation(fields: [authorId], references: [id])
+  userId    Int
+  user      User    @relation(fields: [userId], references: [id])
 }
