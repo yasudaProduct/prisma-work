@@ -1,0 +1,6 @@
+{
+  "name": "prisma-app",
+  "dockerComposeFile": ["../compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/app"
+}
